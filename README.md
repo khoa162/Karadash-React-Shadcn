@@ -75,6 +75,21 @@ npm run dev
 - Dark Mode toggle (Shadcn Switch)
 - Zustand state store for user data
 
+## 🛠 Why I Didn't Use the Shadcn CLI
+
+The Shadcn CLI (`npx shadcn-ui`) is designed primarily for **Next.js projects**.  
+Since this project uses **Vite + React**, the CLI doesn't work out of the box and will fail to scaffold components or inject configs properly.
+
+Instead, I manually copied only the components I needed (e.g. `Button`, `Card`, `Dialog`) directly from the [Shadcn UI](https://ui.shadcn.com) source.
+
+This approach offers:
+- Full control over structure and styling
+- No need for `components.json`
+- Lightweight, clean setup for a small project
+- 100% compatibility with Tailwind, Radix UI, and Shadcn’s design system
+
+The result: **visually and functionally identical to a Shadcn CLI project**, just without automation.
+
 ## 📝 Final Notes
 
 The project sticks closely to the test requirements while keeping the code clean, minimal, and scalable.
