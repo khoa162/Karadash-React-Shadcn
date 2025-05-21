@@ -37,3 +37,48 @@ cd admin-dashboard
 npm install
 npm run dev
 ```
+
+## 🌸 Tech Stack & Choices
+
+| Feature            | Chosen Tool                        |
+|--------------------|------------------------------------|
+| UI Framework       | React (with Vite)                  |
+| Styling            | Tailwind CSS                       |
+| Component Library  | Shadcn UI (manually copied)        |
+| Form Handling      | React Hook Form                    |
+| Validation         | Zod                                |
+| State Management   | Zustand (lightweight, optional)    |
+
+### Why these choices?
+
+- **React + Vite**: React + Vite: Fast setup and dev experience. Vite is optimal for UI-focused projects.
+- **Tailwind CSS**: Quick styling with good design consistency. Paired well with Shadcn's design tokens.
+- **Shadcn UI**: Offers accessible and customizable UI primitives. Manually integrated for full control (no CLI used).
+- **React Hook Form + Zod**: Strongly typed and minimal boilerplate for validation.
+- **Zustand**: Extremely lightweight state management for storing saved user settings.
+
+## 💡 Assumptions / Shortcuts Taken
+
+- **No backend**: All data is mocked in `src/data/dashboardStats.ts`
+- **Dark mode**: Implemented manually via class toggle (`.dark` on `document.documentElement`)
+- **Shadcn components**: Used only necessary components (`Card`, `Dialog`, `Input`, `Switch`, `Button`, etc.), copied manually instead of using CLI
+- **Password display**: Hidden behind static dots (`••••••••`) with no toggle for privacy
+- **Routing**: Project uses a flat file structure without React Router, as the test only requires 2 pages (Dashboard & Settings)
+
+## ✅ Features Implemented
+
+- Summary Cards (responsive grid)
+- Pending Suppliers & Events
+- Reported Posts section
+- Modal with Shadcn Dialog
+- Settings Form with validation (Zod + RHF)
+- Dark Mode toggle (Shadcn Switch)
+- Zustand state store for user data
+
+## 📝 Final Notes
+
+The project sticks closely to the test requirements while keeping the code clean, minimal, and scalable.
+
+Structure is flat and maintainable, suitable for small teams or solo contributors.
+
+If extended, routing (React Router) or API integration can be added with minimal refactor.
